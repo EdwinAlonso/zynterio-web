@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zynterio ERP | Sistemas de Ejecución Inteligente</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        zynterio: {
+                            DEFAULT: '#001F3F',
+                            light: '#0A335C',
+                            dark: '#001326',
+                            accent: '#0284C7'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center space-x-3">
+                    <img src="./assets/img/logos/zynterio vector.png" alt="Zynterio Logo" class="h-9 w-auto" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                    <span class="hidden text-2xl font-extrabold tracking-tight text-zynterio">ZYNTERIO ERP</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center font-medium text-slate-600 text-sm">
+                    <a href="#modulos" class="hover:text-zynterio transition">Módulos</a>
+                    <a href="#facturacion" class="hover:text-zynterio transition">Facturación & POS</a>
+                    <a href="#precios" class="hover:text-zynterio transition">Precios & Planes</a>
+                    <a href="#contacto" class="bg-zynterio text-white px-5 py-2.5 rounded-lg hover:bg-zynterio-light transition shadow-sm font-semibold">
+                        Agendar Demostración
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="pt-36 pb-20 md:pt-44 md:pb-28 px-4 bg-gradient-to-b from-slate-100 via-white to-slate-50 border-b border-slate-200">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-semibold tracking-wide uppercase mb-6">
+                <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+                Plataforma de Ejecución Inteligente
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                Control total de tu producción, <br class="hidden sm:inline">
+                inventarios y analítica en <span class="text-zynterio">tiempo real</span>.
+            </h1>
+
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
+                Diseñado para industrias, mayoristas y cadenas comerciales. Centraliza múltiples bodegas, gestiona líneas de producción y audita inventario sin rotación antes de que afecte tu liquidez.
+            </p>
+
+            <div class="flex flex-col sm:row justify-center items-center gap-4 mb-16">
+                <a href="#contacto" class="w-full sm:w-auto px-8 py-3.5 bg-zynterio text-white rounded-lg font-semibold text-base shadow-lg hover:bg-zynterio-light transition transform hover:-translate-y-0.5">
+                    Solicitar Diagnóstico y Demo
+                </a>
+                <a href="#precios" class="w-full sm:w-auto px-8 py-3.5 bg-white text-slate-700 border border-slate-300 rounded-lg font-semibold text-base hover:bg-slate-50 transition shadow-sm">
+                    Ver Esquema de Precios
+                </a>
+            </div>
+
+            <div class="relative max-w-5xl mx-auto">
+                <div class="rounded-xl overflow-hidden shadow-2xl border border-slate-200 bg-white p-2">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1400" alt="Consola de Análisis Zynterio" class="rounded-lg w-full object-cover">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MÓDULOS DEL SISTEMA -->
+    <section id="modulos" class="py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Arquitectura Modular Unificada</h2>
+                <p class="text-slate-600 text-lg">Módulos conectados de extremo a extremo sin reprocesos ni silos entre planta, almacén y administración comercial.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-zynterio/40 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-zynterio text-white rounded-xl flex items-center justify-center mb-6 font-bold text-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Inventario Multi-bodega</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Trazabilidad por referencias, marcas y variantes. Control de traslados entre sedes y alertas automáticas de reposición.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-zynterio/40 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-zynterio text-white rounded-xl flex items-center justify-center mb-6 font-bold text-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Planeación & Producción</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Gestión de órdenes operativas, cronogramas de avance, control de mermas y balanceo de consumo de insumos.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-zynterio/40 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-zynterio text-white rounded-xl flex items-center justify-center mb-6 font-bold text-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Ventas & Facturación</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Emisión comercial ágil, seguimiento de cartera, liquidación de despachos y auditoría de facturas activas.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-zynterio/40 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-zynterio text-white rounded-xl flex items-center justify-center mb-6 font-bold text-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Analítica & Capital</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Detección inmediata de referencias sin venta por días de inactividad, costos acumulados y exportación a Excel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE FACTURACIÓN & VENTAS -->
+    <section id="facturacion" class="py-24 px-4 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-50 text-emerald-800 text-xs font-bold uppercase mb-4 border border-emerald-200">
+                        Flujo Comercial Ágil
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-6">
+                        Facturación diseñada para el ritmo real del mostrador y la bodega.
+                    </h2>
+                    <p class="text-slate-600 text-base leading-relaxed mb-6">
+                        Zynterio reduce a segundos el proceso de expedición comercial, garantizando consistencia absoluta entre la salida de stock y la emisión del documento contable.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <div class="mt-1 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs">✓</div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">Descarga Automática de Inventario</h4>
+                                <p class="text-slate-600 text-xs">Cada factura activa descuenta las unidades de la bodega origen sin desfases ni doble captura.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="mt-1 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs">✓</div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">Validación de Estado & Auditoría</h4>
+                                <p class="text-slate-600 text-xs">Control de facturas activas, anuladas y notas de ajuste para asegurar informes financieros transparentes.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="mt-1 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs">✓</div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">Soporte Multi-lista & Cartera</h4>
+                                <p class="text-slate-600 text-xs">Gestión de precios por cliente o canal, plazos de crédito y estados de cuenta por cobrar.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-200">
+                    <div class="bg-zynterio rounded-xl p-5 text-white mb-6">
+                        <div class="flex justify-between items-center text-xs opacity-80 mb-2">
+                            <span>SISTEMA DE FACTURACIÓN ACTIVA</span>
+                            <span>TRANSACCIÓN EN LÍNEA</span>
+                        </div>
+                        <div class="text-2xl font-black tracking-wide">Módulo de Despachos & Venta</div>
+                        <div class="text-xs text-slate-300 mt-1">Conexión directa con existencias de bodega principal y puntos satélites.</div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="text-2xl font-black text-slate-900">0%</div>
+                            <div class="text-xs text-slate-500 font-semibold mt-1">Descuadres de Inventario</div>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="text-2xl font-black text-emerald-600">100%</div>
+                            <div class="text-xs text-slate-500 font-semibold mt-1">Trazabilidad por Factura</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESQUEMA DE PRECIOS ZYNTERIO ERP -->
+    <section id="precios" class="py-24 px-4 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 text-zynterio text-xs font-bold uppercase mb-3">
+                    Tarifario Transparente en Pesos Colombianos (COP)
+                </div>
+                <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">Esquema de Precios Zynterio ERP</h2>
+                <p class="text-slate-600 text-base">Planes escalables para empresas en crecimiento o corporativos consolidados.</p>
+            </div>
+
+            <!-- BLOQUE 1: SUSCRIPCIÓN MENSUAL (SaaS) -->
+            <div class="mb-20">
+                <div class="flex flex-col sm:flex-row justify-between items-center bg-zynterio text-white px-6 py-4 rounded-xl mb-8">
+                    <h3 class="text-lg font-bold tracking-wide uppercase">Suscripción Mensual (SaaS)</h3>
+                    <span class="bg-emerald-500 text-white font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider mt-2 sm:mt-0">
+                        15% de descuento en pago anual
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Emprendedor -->
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 flex flex-col justify-between hover:shadow-md transition">
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900">EMPRENDEDOR</h4>
+                            <div class="my-4">
+                                <span class="text-3xl font-black text-slate-900">$50.000</span>
+                                <span class="text-xs text-slate-500 font-semibold block">COP / mes</span>
+                            </div>
+                            <div class="text-xs font-bold text-zynterio bg-blue-50 py-1 px-2 rounded mb-4 inline-block">Módulos: Inventario & Facturación</div>
+                            <ul class="text-xs text-slate-600 space-y-2 mb-6">
+                                <li class="font-semibold text-slate-800">• 1 Usuario / 1 Bodega</li>
+                                <li>• Sin Automatizaciones</li>
+                                <li>• Alertas de stock estándar</li>
+                            </ul>
+                        </div>
+                        <a href="#contacto" class="w-full py-2.5 bg-slate-200 text-slate-800 text-center font-bold text-xs rounded-lg hover:bg-slate-300 transition">Elegir Emprendedor</a>
+                    </div>
+
+                    <!-- Pyme -->
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 flex flex-col justify-between hover:shadow-md transition">
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900">PYME</h4>
+                            <div class="my-4">
+                                <span class="text-3xl font-black text-slate-900">$100.000</span>
+                                <span class="text-xs text-slate-500 font-semibold block">COP / mes</span>
+                            </div>
+                            <div class="text-xs font-bold text-zynterio bg-blue-50 py-1 px-2 rounded mb-4 inline-block">Módulos: Inventario & Facturación</div>
+                            <ul class="text-xs text-slate-600 space-y-2 mb-6">
+                                <li class="font-semibold text-slate-800">• 5 Usuarios / 5 Bodegas</li>
+                                <li>• 1 Automatización + IA Básica</li>
+                                <li>• Consultas avanzadas de stock</li>
+                            </ul>
+                        </div>
+                        <a href="#contacto" class="w-full py-2.5 bg-slate-200 text-slate-800 text-center font-bold text-xs rounded-lg hover:bg-slate-300 transition">Elegir Pyme</a>
+                    </div>
+
+                    <!-- Enterprises -->
+                    <div class="p-6 bg-white rounded-2xl border-2 border-zynterio relative flex flex-col justify-between shadow-xl">
+                        <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-zynterio text-white text-[10px] font-black uppercase px-3 py-1 rounded-full">Recomendado</span>
+                        <div>
+                            <h4 class="text-lg font-bold text-zynterio">ENTERPRISES</h4>
+                            <div class="my-4">
+                                <span class="text-3xl font-black text-zynterio">$150.000</span>
+                                <span class="text-xs text-slate-500 font-semibold block">COP / mes</span>
+                            </div>
+                            <div class="text-xs font-bold text-zynterio bg-blue-50 py-1 px-2 rounded mb-4 inline-block">Módulos: Producción + Inventario + Facturación</div>
+                            <ul class="text-xs text-slate-600 space-y-2 mb-6">
+                                <li class="font-semibold text-slate-800">• Módulos Completos Integrados</li>
+                                <li>• 3 Automatizaciones + IA Básica</li>
+                                <li>• Control de capital inmovilizado</li>
+                            </ul>
+                        </div>
+                        <a href="#contacto" class="w-full py-2.5 bg-zynterio text-white text-center font-bold text-xs rounded-lg hover:bg-zynterio-light transition shadow">Elegir Enterprises</a>
+                    </div>
+
+                    <!-- Business -->
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 flex flex-col justify-between hover:shadow-md transition">
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900">BUSINESS</h4>
+                            <div class="my-4">
+                                <span class="text-3xl font-black text-slate-900">$200.000</span>
+                                <span class="text-xs text-slate-500 font-semibold block">COP / mes</span>
+                            </div>
+                            <div class="text-xs font-bold text-zynterio bg-blue-50 py-1 px-2 rounded mb-4 inline-block">Módulos: Producción + Inventario + Facturación</div>
+                            <ul class="text-xs text-slate-600 space-y-2 mb-6">
+                                <li class="font-semibold text-slate-800">• Módulos Completos Sin Restricción</li>
+                                <li>• 5 Automatizaciones + IA Básica</li>
+                                <li>• Auditoría avanzada de procesos</li>
+                            </ul>
+                        </div>
+                        <a href="#contacto" class="w-full py-2.5 bg-slate-200 text-slate-800 text-center font-bold text-xs rounded-lg hover:bg-slate-300 transition">Elegir Business</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE 2: IMPLEMENTACIÓN ÚNICA -->
+            <div class="mb-20">
+                <div class="bg-slate-900 text-white px-6 py-4 rounded-xl mb-8">
+                    <h3 class="text-lg font-bold tracking-wide uppercase">Inversión Única de Implementación</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                        <h4 class="font-bold text-slate-900 text-base">PLAN PYME</h4>
+                        <div class="text-2xl font-black text-slate-900 my-2">$550.000 COP</div>
+                        <span class="inline-block text-xs font-semibold text-slate-500 bg-white border border-slate-200 rounded px-2 py-0.5 mb-4">10 Horas</span>
+                        <ul class="text-xs text-slate-600 space-y-2">
+                            <li>• Asesoría Estratégica</li>
+                            <li>• Cargue de Información</li>
+                            <li>• Diseño de Informes Personalizados</li>
+                            <li class="font-bold text-emerald-700 bg-emerald-50 p-2 rounded">• Soporte Premium con horas restantes sin vencimiento</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                        <h4 class="font-bold text-slate-900 text-base">PLAN ENTERPRISES</h4>
+                        <div class="text-2xl font-black text-slate-900 my-2">$1.100.000 COP</div>
+                        <span class="inline-block text-xs font-semibold text-slate-500 bg-white border border-slate-200 rounded px-2 py-0.5 mb-4">20 Horas</span>
+                        <ul class="text-xs text-slate-600 space-y-2">
+                            <li>• Asesoría Estratégica Integral</li>
+                            <li>• Cargue Estructurado de Catálogos</li>
+                            <li>• Diseño de Informes Personalizados</li>
+                            <li class="font-bold text-emerald-700 bg-emerald-50 p-2 rounded">• Soporte Premium con horas restantes sin vencimiento</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                        <h4 class="font-bold text-slate-900 text-base">PLAN PRO</h4>
+                        <div class="text-2xl font-black text-slate-900 my-2">$2.200.000 COP</div>
+                        <span class="inline-block text-xs font-semibold text-slate-500 bg-white border border-slate-200 rounded px-2 py-0.5 mb-4">40 Horas</span>
+                        <ul class="text-xs text-slate-600 space-y-2">
+                            <li>• Asesoría de Arquitectura Operativa</li>
+                            <li>• Migración y Depuración de Datos</li>
+                            <li>• Informes Ejecutivos a la Medida</li>
+                            <li class="font-bold text-emerald-700 bg-emerald-50 p-2 rounded">• Soporte Premium con horas restantes sin vencimiento</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE 3 Y 4: SOPORTE Y ON-PREMISE -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Soporte y Adicionales -->
+                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-200">
+                    <h3 class="text-base font-bold text-slate-900 uppercase tracking-wide mb-6 border-b border-slate-200 pb-3">Soporte y Servicios Adicionales</h3>
+                    <div class="space-y-6">
+                        <div class="p-4 bg-white rounded-xl border border-slate-200">
+                            <span class="text-xs font-bold text-emerald-700 uppercase bg-emerald-50 px-2 py-0.5 rounded">Incluido sin costo</span>
+                            <h4 class="font-bold text-slate-900 text-sm mt-2">Soporte Básico Permanente</h4>
+                            <p class="text-xs text-slate-600 mt-1">Consultas de funcionalidad, estabilidad de la plataforma y resolución de incidencias operativas.</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl border border-slate-200">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">Hora Adicional de Soporte Premium</h4>
+                                    <p class="text-xs text-slate-600 mt-1">Consultoría experta, creación de nuevos informes o ajustes específicos.</p>
+                                </div>
+                                <span class="text-base font-black text-zynterio">$110.000 <span class="text-[10px] text-slate-500 font-semibold block">COP / hora</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servidor Propio (On-Premise) -->
+                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-200">
+                    <h3 class="text-base font-bold text-slate-900 uppercase tracking-wide mb-6 border-b border-slate-200 pb-3">Solución On-Premise (Servidor Propio)</h3>
+                    <div class="space-y-6">
+                        <div class="p-4 bg-white rounded-xl border border-slate-200">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-slate-900 text-sm">Plan Pyme On-Premise</h4>
+                                <span class="text-base font-black text-slate-900">$3'000.000 COP <span class="text-[10px] text-slate-500 font-semibold block text-right">(Único)</span></span>
+                            </div>
+                            <p class="text-xs text-slate-600">Implementación directa en el servidor o hosting propio de la empresa. Nivel de características Pyme.</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl border border-slate-200">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-slate-900 text-sm">Plan Enterprises On-Premise</h4>
+                                <span class="text-base font-black text-slate-900">$4'000.000 COP <span class="text-[10px] text-slate-500 font-semibold block text-right">(Único)</span></span>
+                            </div>
+                            <p class="text-xs text-slate-600">Implementación completa en servidor de la empresa. Módulos completos (producción, inventario y facturación) con 3 automatizaciones + IA Básica.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <section id="contacto" class="py-24 px-4 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-2xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-3">Agenda una demostración de Zynterio ERP</h2>
+                <p class="text-slate-600 text-sm">Dinos tus requerimientos y te cotizamos el plan óptimo para tu operación.</p>
+            </div>
+            
+            <form class="space-y-5 bg-white p-8 sm:p-10 rounded-2xl border border-slate-200 shadow-sm" onsubmit="event.preventDefault(); alert('Solicitud registrada correctamente.');">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Nombre completo</label>
+                        <input type="text" required placeholder="Tu nombre" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Correo corporativo</label>
+                        <input type="email" required placeholder="tu@empresa.com" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm transition">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Empresa / Razón Social</label>
+                        <input type="text" required placeholder="Nombre de la empresa" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Modalidad de Interés</label>
+                        <select class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm bg-white transition">
+                            <option>Suscripción Mensual (SaaS)</option>
+                            <option>Servidor Propio (On-Premise)</option>
+                            <option>Solo Consultoría e Implementación</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Descripción de la Operación</label>
+                    <textarea rows="3" placeholder="Número de bodegas, volumen de referencias o procesos que deseas automatizar..." class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm transition"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-3.5 bg-zynterio text-white font-bold rounded-lg hover:bg-zynterio-light transition shadow-md text-sm uppercase tracking-wider">
+                    Solicitar Propuesta y Demo
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-10 border-t border-slate-200 bg-white">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-sm text-slate-500 gap-4">
+            <p class="font-semibold text-zynterio tracking-wider">ZYNTERIO ERP · SISTEMAS DE EJECUCIÓN INTELIGENTE</p>
+            <p>© 2026 Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
