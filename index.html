@@ -55,7 +55,7 @@
     </nav>
 
     <!-- HERO SECTION -->
-    <header class="pt-36 pb-20 md:pt-44 md:pb-28 px-4 bg-gradient-to-b from-slate-100 via-white to-slate-50 border-b border-slate-200">
+    <header class="pt-36 pb-20 md:pt-44 md:pb-24 px-4 bg-gradient-to-b from-slate-100 via-white to-slate-50 border-b border-slate-200">
         <div class="max-w-6xl mx-auto text-center">
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-semibold tracking-wide uppercase mb-6">
                 <span class="w-2 h-2 rounded-full bg-blue-600"></span>
@@ -73,24 +73,227 @@
 
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-16">
                 <a href="#contacto" class="w-full sm:w-auto px-8 py-3.5 bg-zynterio text-white rounded-lg font-semibold text-base shadow-lg hover:bg-zynterio-light transition transform hover:-translate-y-0.5">
-                    Solicitar Diagnóstico
+                    Solicitar Diagnóstico y Demo
                 </a>
                 <a href="https://pruebas.zynterio.cloud/" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-3.5 bg-sky-600 text-white rounded-lg font-semibold text-base hover:bg-sky-700 transition shadow-sm flex items-center justify-center gap-2">
                     <span>Explorar Entorno de Pruebas</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                 </a>
                 <a href="#precios" class="w-full sm:w-auto px-8 py-3.5 bg-white text-slate-700 border border-slate-300 rounded-lg font-semibold text-base hover:bg-slate-50 transition shadow-sm">
-                    Ver Precios
+                    Ver Esquema de Precios
                 </a>
             </div>
 
-            <div class="relative max-w-5xl mx-auto">
-                <div class="rounded-xl overflow-hidden shadow-2xl border border-slate-200 bg-white p-2">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1400" alt="Consola de Análisis Zynterio" class="rounded-lg w-full object-cover">
+            <!-- MOCKUP DE INTERFAZ DEL SISTEMA -->
+            <div class="relative max-w-5xl mx-auto text-left">
+                <div class="rounded-2xl border border-slate-200/80 bg-white shadow-2xl overflow-hidden">
+                    
+                    <div class="bg-slate-900 px-4 py-3 flex items-center justify-between border-b border-slate-800">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+                            <span class="text-xs font-mono text-slate-400 pl-3 hidden sm:inline">zynterio.cloud/app/dashboard</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-xs">
+                            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-semibold border border-emerald-500/20">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                Bodega Central Activa
+                            </span>
+                            <span class="text-slate-400 font-mono hidden md:inline">v2.4-stable</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[460px]">
+                        
+                        <div class="hidden lg:block lg:col-span-3 bg-slate-950 p-4 text-slate-300 border-r border-slate-800 text-xs">
+                            <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-3 px-2">Operaciones</div>
+                            <nav class="space-y-1">
+                                <a href="#" class="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-zynterio text-white font-semibold">
+                                    <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                                    Tablero General
+                                </a>
+                                <a href="#" class="flex items-center gap-2.5 px-3 py-2 rounded-lg hover:bg-slate-900 text-slate-400 hover:text-white transition">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                                    Bodegas & Stock
+                                </a>
+                                <a href="#" class="flex items-center gap-2.5 px-3 py-2 rounded-lg hover:bg-slate-900 text-slate-400 hover:text-white transition">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                                    Facturación & POS
+                                </a>
+                                <a href="#" class="flex items-center gap-2.5 px-3 py-2 rounded-lg hover:bg-slate-900 text-slate-400 hover:text-white transition">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                                    Producción & Planta
+                                </a>
+                            </nav>
+
+                            <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mt-6 mb-3 px-2">Control Financiero</div>
+                            <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800">
+                                <span class="text-[10px] text-slate-400 block">Capital Inmovilizado</span>
+                                <span class="text-base font-black text-amber-400">$18'450.000 COP</span>
+                                <span class="text-[10px] text-slate-500 block mt-1">42 referencias en riesgo</span>
+                            </div>
+                        </div>
+
+                        <div class="col-span-1 lg:col-span-9 p-5 sm:p-6 bg-slate-50/50">
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                                <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm">
+                                    <div class="text-xs font-medium text-slate-500">Ventas Registradas Hoy</div>
+                                    <div class="text-xl font-extrabold text-slate-900 mt-1">$4'820.000 <span class="text-[10px] text-slate-400">COP</span></div>
+                                    <span class="inline-flex items-center text-[10px] text-emerald-600 font-bold mt-1">↑ +14% vs meta diaria</span>
+                                </div>
+
+                                <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm">
+                                    <div class="text-xs font-medium text-slate-500">Existencias Multi-bodega</div>
+                                    <div class="text-xl font-extrabold text-slate-900 mt-1">12.480 <span class="text-[10px] text-slate-400">uds</span></div>
+                                    <span class="inline-flex items-center text-[10px] text-sky-600 font-bold mt-1">● 3 sedes sincronizadas</span>
+                                </div>
+
+                                <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm">
+                                    <div class="text-xs font-medium text-slate-500">Despachos Pendientes</div>
+                                    <div class="text-xl font-extrabold text-slate-900 mt-1">8 <span class="text-[10px] text-slate-400">órdenes</span></div>
+                                    <span class="inline-flex items-center text-[10px] text-amber-600 font-bold mt-1">⏱ En línea de empaque</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                                <div class="px-4 py-3 border-b border-slate-200 flex justify-between items-center bg-slate-50/70">
+                                    <div class="font-bold text-xs text-slate-800 uppercase tracking-wider">Últimos Movimientos y Facturación Directa</div>
+                                    <span class="text-[11px] text-zynterio font-semibold bg-blue-50 px-2 py-0.5 rounded">Filtro: Todo el sistema</span>
+                                </div>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full text-left text-xs text-slate-600">
+                                        <thead class="bg-slate-100 text-slate-500 uppercase text-[10px] border-b border-slate-200">
+                                            <tr>
+                                                <th class="py-2.5 px-3">Comprobante</th>
+                                                <th class="py-2.5 px-3">Referencia / Detalle</th>
+                                                <th class="py-2.5 px-3">Bodega</th>
+                                                <th class="py-2.5 px-3 text-right">Monto (COP)</th>
+                                                <th class="py-2.5 px-3 text-center">Estado</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-slate-100 font-medium">
+                                            <tr>
+                                                <td class="py-2.5 px-3 font-mono font-bold text-zynterio">FAC-2026-0891</td>
+                                                <td class="py-2.5 px-3 text-slate-800">Caja Polipropileno Ref 4x4 (x50)</td>
+                                                <td class="py-2.5 px-3">Principal Bogotá</td>
+                                                <td class="py-2.5 px-3 text-right font-bold text-slate-900">$1'250.000</td>
+                                                <td class="py-2.5 px-3 text-center"><span class="px-2 py-0.5 rounded-full text-[10px] bg-emerald-100 text-emerald-800 font-bold">Descargado</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-2.5 px-3 font-mono font-bold text-zynterio">FAC-2026-0890</td>
+                                                <td class="py-2.5 px-3 text-slate-800">Cinta de Zuncho 1/2 pulgada</td>
+                                                <td class="py-2.5 px-3">Satélite Américas</td>
+                                                <td class="py-2.5 px-3 text-right font-bold text-slate-900">$480.000</td>
+                                                <td class="py-2.5 px-3 text-center"><span class="px-2 py-0.5 rounded-full text-[10px] bg-emerald-100 text-emerald-800 font-bold">Descargado</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-2.5 px-3 font-mono font-bold text-slate-400">TRL-2026-0144</td>
+                                                <td class="py-2.5 px-3 text-slate-800">Traslado Operativo Interno (Lote 12)</td>
+                                                <td class="py-2.5 px-3">Planta → Despacho</td>
+                                                <td class="py-2.5 px-3 text-right text-slate-500">—</td>
+                                                <td class="py-2.5 px-3 text-center"><span class="px-2 py-0.5 rounded-full text-[10px] bg-blue-100 text-blue-800 font-bold">En Tránsito</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- SECCIÓN DE CLIENTES (PRUEBA SOCIAL REAL) -->
+    <section class="py-16 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-[11px] font-extrabold uppercase tracking-widest text-sky-700 bg-sky-50 px-3 py-1 rounded-full border border-sky-200/60 inline-block mb-3">
+                    Arquitectura en Producción
+                </span>
+                <h3 class="text-2xl font-black text-slate-900 tracking-tight">
+                    Empresas que gestionan sus operaciones con Zynterio ERP
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-4 md:gap-6">
+                <!-- ADOS -->
+                <div class="p-5 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md hover:border-slate-300 transition flex items-center gap-3.5">
+                    <div class="w-10 h-10 rounded-lg bg-zynterio text-white font-extrabold flex items-center justify-center text-sm shadow-sm">AD</div>
+                    <div>
+                        <div class="font-extrabold text-slate-900 text-sm tracking-wide">ADOS</div>
+                        <div class="text-[11px] text-slate-500 font-medium">Gestión Comercial</div>
+                    </div>
+                </div>
+
+                <!-- IZACK -->
+                <div class="p-5 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md hover:border-slate-300 transition flex items-center gap-3.5">
+                    <div class="w-10 h-10 rounded-lg bg-slate-900 text-white font-extrabold flex items-center justify-center text-sm shadow-sm">IZ</div>
+                    <div>
+                        <div class="font-extrabold text-slate-900 text-sm tracking-wide">IZACK</div>
+                        <div class="text-[11px] text-slate-500 font-medium">Izack Urban</div>
+                    </div>
+                </div>
+
+                <!-- ERREGE -->
+                <div class="p-5 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md hover:border-slate-300 transition flex items-center gap-3.5">
+                    <div class="w-10 h-10 rounded-lg bg-sky-800 text-white font-extrabold flex items-center justify-center text-sm shadow-sm">RG</div>
+                    <div>
+                        <div class="font-extrabold text-slate-900 text-sm tracking-wide">ERREGE</div>
+                        <div class="text-[11px] text-slate-500 font-medium">Cadena Operativa</div>
+                    </div>
+                </div>
+
+                <!-- GROUP-FAM -->
+                <div class="p-5 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md hover:border-slate-300 transition flex items-center gap-3.5">
+                    <div class="w-10 h-10 rounded-lg bg-slate-800 text-white font-extrabold flex items-center justify-center text-sm shadow-sm">GF</div>
+                    <div>
+                        <div class="font-extrabold text-slate-900 text-sm tracking-wide">GROUP-FAM</div>
+                        <div class="text-[11px] text-slate-500 font-medium">Distribución & Logística</div>
+                    </div>
+                </div>
+
+                <!-- IVORY 360 -->
+                <div class="p-5 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md hover:border-slate-300 transition flex items-center gap-3.5">
+                    <div class="w-10 h-10 rounded-lg bg-slate-700 text-white font-extrabold flex items-center justify-center text-sm shadow-sm">360</div>
+                    <div>
+                        <div class="font-extrabold text-slate-900 text-sm tracking-wide">IVORY 360</div>
+                        <div class="text-[11px] text-slate-500 font-medium">Líneas de Producción</div>
+                    </div>
+                </div>
+
+                <!-- DON WILL FOOD S.A.S -->
+                <div class="p-5 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md hover:border-slate-300 transition flex items-center gap-3.5">
+                    <div class="w-10 h-10 rounded-lg bg-amber-700 text-white font-extrabold flex items-center justify-center text-sm shadow-sm">DW</div>
+                    <div>
+                        <div class="font-extrabold text-slate-900 text-sm tracking-wide leading-tight">DON WILL FOOD</div>
+                        <div class="text-[11px] text-slate-500 font-medium">Alimentos & Suministros</div>
+                    </div>
+                </div>
+
+                <!-- HUMMING -->
+                <div class="p-5 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md hover:border-slate-300 transition flex items-center gap-3.5">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-800 text-white font-extrabold flex items-center justify-center text-sm shadow-sm">HM</div>
+                    <div>
+                        <div class="font-extrabold text-slate-900 text-sm tracking-wide">HUMMING</div>
+                        <div class="text-[11px] text-slate-500 font-medium">ERP Confección & Moda</div>
+                    </div>
+                </div>
+
+                <!-- EVANDRA -->
+                <div class="p-5 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md hover:border-slate-300 transition flex items-center gap-3.5">
+                    <div class="w-10 h-10 rounded-lg bg-indigo-900 text-white font-extrabold flex items-center justify-center text-sm shadow-sm">EV</div>
+                    <div>
+                        <div class="font-extrabold text-slate-900 text-sm tracking-wide">EVANDRA</div>
+                        <div class="text-[11px] text-slate-500 font-medium">Control de Inventarios</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- MÓDULOS DEL SISTEMA -->
     <section id="modulos" class="py-24 px-4 bg-white">
@@ -346,7 +549,6 @@
 
             <!-- BLOQUE 3 Y 4: SOPORTE Y ON-PREMISE -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <!-- Soporte y Adicionales -->
                 <div class="p-8 bg-slate-50 rounded-2xl border border-slate-200">
                     <h3 class="text-base font-bold text-slate-900 uppercase tracking-wide mb-6 border-b border-slate-200 pb-3">Soporte y Servicios Adicionales</h3>
                     <div class="space-y-6">
@@ -367,7 +569,6 @@
                     </div>
                 </div>
 
-                <!-- Servidor Propio (On-Premise) -->
                 <div class="p-8 bg-slate-50 rounded-2xl border border-slate-200">
                     <h3 class="text-base font-bold text-slate-900 uppercase tracking-wide mb-6 border-b border-slate-200 pb-3">Solución On-Premise (Servidor Propio)</h3>
                     <div class="space-y-6">
@@ -391,7 +592,7 @@
         </div>
     </section>
 
-    <!-- FORMULARIO DE CONTACTO -->
+    <!-- FORMULARIO DE CONTACTO FUNCIONAL CON WEB3FORMS -->
     <section id="contacto" class="py-24 px-4 bg-slate-50 border-t border-slate-200">
         <div class="max-w-2xl mx-auto">
             <div class="text-center mb-10">
@@ -399,42 +600,53 @@
                 <p class="text-slate-600 text-sm">Dinos tus requerimientos y te cotizamos el plan óptimo para tu operación.</p>
             </div>
             
-            <form class="space-y-5 bg-white p-8 sm:p-10 rounded-2xl border border-slate-200 shadow-sm" onsubmit="event.preventDefault(); alert('Solicitud registrada correctamente.');">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Nombre completo</label>
-                        <input type="text" required placeholder="Tu nombre" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm transition">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Correo corporativo</label>
-                        <input type="email" required placeholder="tu@empresa.com" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm transition">
-                    </div>
-                </div>
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5 bg-white p-8 sm:p-10 rounded-2xl border border-slate-200 shadow-sm">
+    
+    <!-- ACCESS KEY LIMPIA -->
+    <input type="hidden" name="access_key" value="3b829119-1a74-4bef-a39e-495ed1477b0c">
+    
+    <!-- REDIRECCIÓN -->
+    <input type="hidden" name="redirect" value="https://zynterio.cloud/gracias.html">
+    
+    <input type="hidden" name="subject" value="Nueva Solicitud de Demostración - Zynterio ERP">
+    <input type="hidden" name="from_name" value="Zynterio Leads">
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Empresa / Razón Social</label>
-                        <input type="text" required placeholder="Nombre de la empresa" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm transition">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Modalidad de Interés</label>
-                        <select class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm bg-white transition">
-                            <option>Suscripción Mensual (SaaS)</option>
-                            <option>Servidor Propio (On-Premise)</option>
-                            <option>Solo Consultoría e Implementación</option>
-                        </select>
-                    </div>
-                </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Nombre completo</label>
+            <input type="text" name="nombre" required placeholder="Tu nombre" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm transition">
+        </div>
+        <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Correo corporativo</label>
+            <input type="email" name="email" required placeholder="tu@empresa.com" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm transition">
+        </div>
+    </div>
 
-                <div>
-                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Descripción de la Operación</label>
-                    <textarea rows="3" placeholder="Número de bodegas, volumen de referencias o procesos que deseas automatizar..." class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm transition"></textarea>
-                </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Empresa / Razón Social</label>
+            <input type="text" name="empresa" required placeholder="Nombre de la empresa" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm transition">
+        </div>
+        <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Modalidad de Interés</label>
+            <select name="modalidad" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm bg-white transition">
+                <option value="Suscripción Mensual (SaaS)">Suscripción Mensual (SaaS)</option>
+                <option value="Servidor Propio (On-Premise)">Servidor Propio (On-Premise)</option>
+                <option value="Solo Consultoría e Implementación">Solo Consultoría e Implementación</option>
+            </select>
+        </div>
+    </div>
 
-                <button type="submit" class="w-full py-3.5 bg-zynterio text-white font-bold rounded-lg hover:bg-zynterio-light transition shadow-md text-sm uppercase tracking-wider">
-                    Solicitar Propuesta y Demo
-                </button>
-            </form>
+    <div>
+        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Descripción de la Operación</label>
+        <textarea name="mensaje" rows="3" placeholder="Número de bodegas, volumen de referencias o procesos que deseas automatizar..." class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm transition"></textarea>
+    </div>
+
+    <button type="submit" class="w-full py-3.5 bg-zynterio text-white font-bold rounded-lg hover:bg-zynterio-light transition shadow-md text-sm uppercase tracking-wider">
+        Solicitar Propuesta y Demo
+    </button>
+</form>
         </div>
     </section>
 
