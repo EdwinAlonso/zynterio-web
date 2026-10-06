@@ -10,7 +10,7 @@
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    })(window,document,'script','dataLayer','GTM-KXNNLSZ6');</script>
     <!-- END GOOGLE TAG MANAGER -->
 
     <!-- METADATOS SEO Y SOCIAL SHARING -->
@@ -77,7 +77,7 @@
 <body class="bg-slate-50 text-slate-900 antialiased selection:bg-sky-500 selection:text-white relative">
 
     <!-- GOOGLE TAG MANAGER (NOSCRIPT) - BODY -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXNNLSZ6"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- END GOOGLE TAG MANAGER (NOSCRIPT) -->
 
@@ -112,8 +112,12 @@
 
                 <!-- Botón Menú Móvil -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" type="button" class="text-slate-700 hover:text-zynterio p-2 rounded-lg focus:outline-none" aria-label="Abrir menú de navegación">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <button id="mobile-menu-btn" 
+                            type="button" 
+                            onclick="toggleMenu()"
+                            class="text-slate-700 hover:text-zynterio p-2.5 rounded-lg focus:outline-none focus:bg-slate-100" 
+                            aria-label="Abrir o cerrar menú de navegación">
+                        <svg class="w-7 h-7 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
@@ -122,15 +126,15 @@
         </div>
 
         <!-- Menú Móvil Desplegable -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3 font-medium text-slate-700 shadow-xl">
-            <a href="#modulos" class="block py-2 hover:text-zynterio border-b border-slate-100">Módulos</a>
-            <a href="#sectores" class="block py-2 hover:text-zynterio border-b border-slate-100">Sectores Especializados</a>
-            <a href="#facturacion" class="block py-2 hover:text-zynterio border-b border-slate-100">Facturación & POS</a>
-            <a href="#precios" class="block py-2 hover:text-zynterio border-b border-slate-100">Precios & Planes</a>
-            <a href="https://pruebas.zynterio.cloud/" target="_blank" rel="noopener noreferrer" class="block py-2 text-sky-700 font-semibold">
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 pt-4 pb-6 space-y-3 font-medium text-slate-700 shadow-xl">
+            <a href="#modulos" onclick="toggleMenu()" class="block py-2.5 hover:text-zynterio border-b border-slate-100 text-sm">Módulos</a>
+            <a href="#sectores" onclick="toggleMenu()" class="block py-2.5 hover:text-zynterio border-b border-slate-100 text-sm">Sectores Especializados</a>
+            <a href="#facturacion" onclick="toggleMenu()" class="block py-2.5 hover:text-zynterio border-b border-slate-100 text-sm">Facturación & POS</a>
+            <a href="#precios" onclick="toggleMenu()" class="block py-2.5 hover:text-zynterio border-b border-slate-100 text-sm">Precios & Planes</a>
+            <a href="https://pruebas.zynterio.cloud/" target="_blank" rel="noopener noreferrer" class="block py-2.5 text-sky-700 font-bold text-sm">
                 Ambiente Demo ↗
             </a>
-            <a href="#contacto" class="block text-center w-full bg-zynterio text-white py-3 rounded-lg font-semibold mt-2">
+            <a href="#contacto" onclick="toggleMenu()" class="block text-center w-full bg-zynterio text-white py-3 rounded-lg font-bold text-sm mt-3 shadow-md">
                 Agendar Demostración
             </a>
         </div>
@@ -391,7 +395,7 @@
                 </div>
 
                 <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm">
-                    <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-800 font-bold flex items-center justify-center mb-4">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-800 text-white font-bold flex items-center justify-center mb-4">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
                     </div>
                     <h3 class="text-lg font-bold text-slate-900 mb-2">Distribución & Empaque Mayorista</h3>
@@ -756,7 +760,7 @@
                     <textarea id="mensaje" name="mensaje" rows="3" placeholder="Número de bodegas, volumen de referencias o procesos que deseas automatizar..." class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm transition"></textarea>
                 </div>
 
-                <!-- CHECKBOX OBLIGATORIO DE HABEAS DATA / PRIVACIDAD (META & GOOGLE ADS) -->
+                <!-- CHECKBOX OBLIGATORIO DE HABEAS DATA / PRIVACIDAD -->
                 <div class="flex items-start gap-2.5 pt-2">
                     <input type="checkbox" id="acepto-terminos" required class="mt-1 h-4 w-4 rounded border-slate-300 text-zynterio focus:ring-zynterio">
                     <label for="acepto-terminos" class="text-xs text-slate-600 leading-snug">
@@ -781,36 +785,155 @@
     </section>
 
     <!-- FOOTER OPTIMIZADO PARA MÓVIL Y ESCRITORIO -->
-<footer class="py-12 pb-24 md:pb-12 border-t border-slate-200 bg-white">
-    <div class="max-w-7xl mx-auto px-4 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-6">
-        <div>
-            <p class="font-bold text-xs sm:text-sm text-zynterio tracking-wider">
-                ZYNTERIO ERP · SISTEMAS DE EJECUCIÓN INTELIGENTE
-            </p>
-            <p class="text-xs text-slate-500 mt-1">
-                © 2026 Todos los derechos reservados.
-            </p>
-        </div>
+    <footer class="py-12 pb-24 md:pb-12 border-t border-slate-200 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <p class="font-bold text-xs sm:text-sm text-zynterio tracking-wider">
+                    ZYNTERIO ERP · SISTEMAS DE EJECUCIÓN INTELIGENTE
+                </p>
+                <p class="text-xs text-slate-500 mt-1">
+                    © 2026 Todos los derechos reservados.
+                </p>
+            </div>
 
-        <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-xs">
-            <a href="/privacidad.html" class="text-slate-600 hover:text-zynterio hover:underline transition">
-                Privacidad & Tratamiento de Datos
-            </a>
-            <span class="hidden sm:inline text-slate-300">|</span>
-            <a href="https://pruebas.zynterio.cloud/" target="_blank" rel="noopener noreferrer" class="text-sky-700 hover:text-sky-900 font-bold border border-sky-200 bg-sky-50 px-3 py-1.5 rounded-lg transition">
-                Acceso Servidor de Pruebas ↗
-            </a>
+            <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-xs">
+                <a href="/privacidad.html" class="text-slate-600 hover:text-zynterio hover:underline transition">
+                    Privacidad & Tratamiento de Datos
+                </a>
+                <span class="hidden sm:inline text-slate-300">|</span>
+                <a href="https://pruebas.zynterio.cloud/" target="_blank" rel="noopener noreferrer" class="text-sky-700 hover:text-sky-900 font-bold border border-sky-200 bg-sky-50 px-3 py-1.5 rounded-lg transition">
+                    Acceso Servidor de Pruebas ↗
+                </a>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-    <!-- BOTÓN FLOTANTE WHATSAPP CON EVENTO GTM -->
-    <!-- Coloca tu número en lugar de 573133880621 -->
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
     <a id="cta-whatsapp"
-       href="https://wa.me/573133880621?text=Hola,%20deseo%20agendar%20una%20demostraci%C3%B3n%20y%20conocer%20los%20planes%20de%20Zynterio%20ERP" 
+       href="https://wa.me/573001234567?text=Hola,%20deseo%20agendar%20una%20demostraci%C3%B3n%20y%20conocer%20los%20planes%20de%20Zynterio%20ERP" 
        target="_blank" 
        rel="noopener noreferrer" 
        class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-3.5 rounded-full shadow-2xl hover:bg-[#20ba59] transition-all transform hover:scale-110 flex items-center justify-center"
        aria-label="Contactar por WhatsApp">
         <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+    </a>
+
+    <!-- BANNER DE COOKIES -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 w-full bg-slate-900/95 backdrop-blur-md text-white px-4 py-4 z-50 border-t border-slate-800 shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-4 transition-all">
+        <p class="text-xs text-slate-300 max-w-4xl text-center sm:text-left">
+            Utilizamos cookies técnicas y de analítica para optimizar la experiencia en nuestra plataforma. Puedes conocer más en nuestra 
+            <a href="/privacidad.html" class="underline text-sky-400 hover:text-sky-300">Política de Privacidad</a>.
+        </p>
+        <div class="flex items-center gap-3 shrink-0">
+            <button id="accept-cookies" class="px-5 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-lg text-xs font-bold transition shadow-sm">
+                Aceptar Cookies
+            </button>
+        </div>
+    </div>
+
+    <!-- SCRIPTS INTERACTIVOS Y CONTROL -->
+    <script>
+        // Función global de apertura/cierre de menú móvil
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu) {
+                menu.classList.toggle('hidden');
+            }
+        }
+
+        // Medición de clics en WhatsApp para GTM
+        const waBtn = document.getElementById('cta-whatsapp');
+        if (waBtn) {
+            waBtn.addEventListener('click', function () {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    event: 'whatsapp_click',
+                    channel: 'whatsapp_floating_button',
+                    page: window.location.pathname
+                });
+            });
+        }
+
+        // Envío asíncrono del formulario a Web3Forms
+        const form = document.getElementById('demo-form');
+        if (form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const submitBtn = document.getElementById('submit-btn');
+                const btnText = document.getElementById('btn-text');
+                const btnSpinner = document.getElementById('btn-spinner');
+                const formResult = document.getElementById('form-result');
+
+                submitBtn.disabled = true;
+                btnText.textContent = 'Enviando solicitud...';
+                btnSpinner.classList.remove('hidden');
+                formResult.classList.add('hidden');
+
+                const formData = new FormData(form);
+                const object = Object.fromEntries(formData);
+                const json = JSON.stringify(object);
+
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                })
+                .then(async (response) => {
+                    let res = await response.json();
+                    if (response.status === 200) {
+                        window.dataLayer = window.dataLayer || [];
+                        window.dataLayer.push({
+                            event: 'generate_lead',
+                            form_name: 'demo_zynterio_erp',
+                            service_interest: object.modalidad || 'General'
+                        });
+
+                        formResult.textContent = '¡Solicitud enviada con éxito! Redirigiendo...';
+                        formResult.className = 'p-4 rounded-lg text-sm font-semibold text-center bg-emerald-100 text-emerald-800';
+                        form.reset();
+
+                        setTimeout(() => {
+                            window.location.href = '/gracias.html';
+                        }, 1200);
+                    } else {
+                        formResult.textContent = res.message || 'Ocurrió un error. Por favor intenta de nuevo.';
+                        formResult.className = 'p-4 rounded-lg text-sm font-semibold text-center bg-rose-100 text-rose-800';
+                        submitBtn.disabled = false;
+                        btnText.textContent = 'Solicitar Propuesta y Demo';
+                        btnSpinner.classList.add('hidden');
+                        formResult.classList.remove('hidden');
+                    }
+                })
+                .catch(error => {
+                    formResult.textContent = 'Hubo un error de conexión al enviar el formulario.';
+                    formResult.className = 'p-4 rounded-lg text-sm font-semibold text-center bg-rose-100 text-rose-800';
+                    submitBtn.disabled = false;
+                    btnText.textContent = 'Solicitar Propuesta y Demo';
+                    btnSpinner.classList.add('hidden');
+                    formResult.classList.remove('hidden');
+                });
+            });
+        }
+
+        // Control del banner de cookies
+        const cookieBanner = document.getElementById('cookie-banner');
+        const acceptCookiesBtn = document.getElementById('accept-cookies');
+        if (cookieBanner && acceptCookiesBtn) {
+            if (localStorage.getItem('zynterio_cookies_accepted') === 'true') {
+                cookieBanner.classList.add('hidden');
+            }
+            acceptCookiesBtn.addEventListener('click', function () {
+                localStorage.setItem('zynterio_cookies_accepted', 'true');
+                cookieBanner.classList.add('hidden');
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({ event: 'cookie_consent_accepted' });
+            });
+        }
+    </script>
+</body>
+</html>
