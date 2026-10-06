@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zynterio ERP | Sistemas de Ejecución Inteligente</title>
-    
-    <!-- Tailwind CSS CDN -->
+    <title>Zynterio ERP | Software de Gestión de Inventarios, Producción y Facturación</title>
+
+    <!-- METADATOS SEO PRIMARIOS -->
+    <meta name="description" content="Zynterio ERP: Plataforma de ejecución inteligente para empresas y distribuidoras. Control multi-bodega, balanceo de líneas de producción y facturación ágil en tiempo real.">
+    <meta name="keywords" content="ERP Colombia, software de inventarios, facturación electrónica, control de producción, ERP multi-bodega, Zynterio">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://zynterio.cloud/">
+
+    <!-- OPEN GRAPH / WHATSAPP / REDES SOCIALES -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Zynterio ERP | Software de Gestión de Inventarios y Producción">
+    <meta property="og:description" content="Centraliza bodegas, optimiza líneas de producción y audita inventario sin rotación en tiempo real.">
+    <meta property="og:url" content="https://zynterio.cloud/">
+    <meta property="og:image" content="https://zynterio.cloud/assets/img/logos/zynterio-og.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- DATOS ESTRUCTURADOS SCHEMA.ORG (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Zynterio ERP",
+      "operatingSystem": "Web, Cloud",
+      "applicationCategory": "BusinessApplication",
+      "description": "Sistema de gestión integral para control de inventarios, líneas de producción y facturación comercial.",
+      "url": "https://zynterio.cloud/",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "COP",
+        "price": "50000",
+        "priceValidUntil": "2027-12-31"
+      }
+    }
+    </script>
+
+    <!-- GOOGLE ANALYTICS 4 (Reemplaza G-XXXXXXXXXX con tu ID real de medición) -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+
+    <!-- PRECONEXIÓN DE FUENTES (WPO) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- TAILWIND CSS CDN (Recomendación: compilar estático para máxima velocidad) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -23,22 +72,29 @@
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-sky-500 selection:text-white">
 
     <!-- BARRA DE NAVEGACIÓN -->
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <div class="flex items-center space-x-3">
-                    <img src="./assets/img/logos/zynterio vector.png" alt="Zynterio Logo" class="h-9 w-auto" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <!-- Logotipo -->
+                <a href="/" class="flex items-center space-x-3">
+                    <img src="./assets/img/logos/zynterio vector.png" 
+                         alt="Logo Zynterio ERP - Sistemas de Ejecución Inteligente" 
+                         width="140" 
+                         height="36" 
+                         class="h-9 w-auto" 
+                         onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                     <span class="hidden text-2xl font-extrabold tracking-tight text-zynterio">ZYNTERIO ERP</span>
-                </div>
+                </a>
                 
+                <!-- Menú de escritorio -->
                 <div class="hidden md:flex space-x-6 items-center font-medium text-slate-600 text-sm">
                     <a href="#modulos" class="hover:text-zynterio transition">Módulos</a>
                     <a href="#facturacion" class="hover:text-zynterio transition">Facturación & POS</a>
@@ -50,7 +106,29 @@
                         Agendar Demostración
                     </a>
                 </div>
+
+                <!-- Botón Hamburguesa Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" class="text-slate-700 hover:text-zynterio p-2 rounded-lg focus:outline-none" aria-label="Abrir menú de navegación">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3 font-medium text-slate-700 shadow-xl">
+            <a href="#modulos" class="block py-2 hover:text-zynterio border-b border-slate-100">Módulos</a>
+            <a href="#facturacion" class="block py-2 hover:text-zynterio border-b border-slate-100">Facturación & POS</a>
+            <a href="#precios" class="block py-2 hover:text-zynterio border-b border-slate-100">Precios & Planes</a>
+            <a href="https://pruebas.zynterio.cloud/" target="_blank" rel="noopener noreferrer" class="block py-2 text-sky-700 font-semibold">
+                Ambiente Demo ↗
+            </a>
+            <a href="#contacto" class="block text-center w-full bg-zynterio text-white py-3 rounded-lg font-semibold mt-2">
+                Agendar Demostración
+            </a>
         </div>
     </nav>
 
@@ -62,6 +140,7 @@
                 Plataforma de Ejecución Inteligente
             </div>
 
+            <!-- H1 PRINCIPAL DE LA PÁGINA (SEO) -->
             <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
                 Control total de tu producción, <br class="hidden sm:inline">
                 inventarios y analítica en <span class="text-zynterio">tiempo real</span>.
@@ -109,22 +188,22 @@
                         <div class="hidden lg:block lg:col-span-3 bg-slate-950 p-4 text-slate-300 border-r border-slate-800 text-xs">
                             <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-3 px-2">Operaciones</div>
                             <nav class="space-y-1">
-                                <a href="#" class="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-zynterio text-white font-semibold">
+                                <span class="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-zynterio text-white font-semibold cursor-default">
                                     <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
                                     Tablero General
-                                </a>
-                                <a href="#" class="flex items-center gap-2.5 px-3 py-2 rounded-lg hover:bg-slate-900 text-slate-400 hover:text-white transition">
+                                </span>
+                                <span class="flex items-center gap-2.5 px-3 py-2 rounded-lg hover:bg-slate-900 text-slate-400 hover:text-white transition cursor-default">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
                                     Bodegas & Stock
-                                </a>
-                                <a href="#" class="flex items-center gap-2.5 px-3 py-2 rounded-lg hover:bg-slate-900 text-slate-400 hover:text-white transition">
+                                </span>
+                                <span class="flex items-center gap-2.5 px-3 py-2 rounded-lg hover:bg-slate-900 text-slate-400 hover:text-white transition cursor-default">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                                     Facturación & POS
-                                </a>
-                                <a href="#" class="flex items-center gap-2.5 px-3 py-2 rounded-lg hover:bg-slate-900 text-slate-400 hover:text-white transition">
+                                </span>
+                                <span class="flex items-center gap-2.5 px-3 py-2 rounded-lg hover:bg-slate-900 text-slate-400 hover:text-white transition cursor-default">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
                                     Producción & Planta
-                                </a>
+                                </span>
                             </nav>
 
                             <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mt-6 mb-3 px-2">Control Financiero</div>
@@ -163,7 +242,7 @@
                                     <span class="text-[11px] text-zynterio font-semibold bg-blue-50 px-2 py-0.5 rounded">Filtro: Todo el sistema</span>
                                 </div>
                                 <div class="overflow-x-auto">
-                                    <table class="w-full text-left text-xs text-slate-600">
+                                    <table class="w-full text-left text-xs text-slate-600 min-w-[500px]">
                                         <thead class="bg-slate-100 text-slate-500 uppercase text-[10px] border-b border-slate-200">
                                             <tr>
                                                 <th class="py-2.5 px-3">Comprobante</th>
@@ -214,13 +293,13 @@
                 <span class="text-[11px] font-extrabold uppercase tracking-widest text-sky-700 bg-sky-50 px-3 py-1 rounded-full border border-sky-200/60 inline-block mb-3">
                     Arquitectura en Producción
                 </span>
-                <h3 class="text-2xl font-black text-slate-900 tracking-tight">
+                <!-- H2 Semántico -->
+                <h2 class="text-2xl font-black text-slate-900 tracking-tight">
                     Empresas que gestionan sus operaciones con Zynterio ERP
-                </h3>
+                </h2>
             </div>
 
             <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-4 md:gap-6">
-                <!-- ADOS -->
                 <div class="p-5 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md hover:border-slate-300 transition flex items-center gap-3.5">
                     <div class="w-10 h-10 rounded-lg bg-zynterio text-white font-extrabold flex items-center justify-center text-sm shadow-sm">AD</div>
                     <div>
@@ -229,7 +308,6 @@
                     </div>
                 </div>
 
-                <!-- IZACK -->
                 <div class="p-5 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md hover:border-slate-300 transition flex items-center gap-3.5">
                     <div class="w-10 h-10 rounded-lg bg-slate-900 text-white font-extrabold flex items-center justify-center text-sm shadow-sm">IZ</div>
                     <div>
@@ -238,7 +316,6 @@
                     </div>
                 </div>
 
-                <!-- ERREGE -->
                 <div class="p-5 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md hover:border-slate-300 transition flex items-center gap-3.5">
                     <div class="w-10 h-10 rounded-lg bg-sky-800 text-white font-extrabold flex items-center justify-center text-sm shadow-sm">RG</div>
                     <div>
@@ -247,7 +324,6 @@
                     </div>
                 </div>
 
-                <!-- GROUP-FAM -->
                 <div class="p-5 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md hover:border-slate-300 transition flex items-center gap-3.5">
                     <div class="w-10 h-10 rounded-lg bg-slate-800 text-white font-extrabold flex items-center justify-center text-sm shadow-sm">GF</div>
                     <div>
@@ -256,7 +332,6 @@
                     </div>
                 </div>
 
-                <!-- IVORY 360 -->
                 <div class="p-5 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md hover:border-slate-300 transition flex items-center gap-3.5">
                     <div class="w-10 h-10 rounded-lg bg-slate-700 text-white font-extrabold flex items-center justify-center text-sm shadow-sm">360</div>
                     <div>
@@ -265,7 +340,6 @@
                     </div>
                 </div>
 
-                <!-- DON WILL FOOD S.A.S -->
                 <div class="p-5 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md hover:border-slate-300 transition flex items-center gap-3.5">
                     <div class="w-10 h-10 rounded-lg bg-amber-700 text-white font-extrabold flex items-center justify-center text-sm shadow-sm">DW</div>
                     <div>
@@ -274,7 +348,6 @@
                     </div>
                 </div>
 
-                <!-- HUMMING -->
                 <div class="p-5 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md hover:border-slate-300 transition flex items-center gap-3.5">
                     <div class="w-10 h-10 rounded-lg bg-emerald-800 text-white font-extrabold flex items-center justify-center text-sm shadow-sm">HM</div>
                     <div>
@@ -283,7 +356,6 @@
                     </div>
                 </div>
 
-                <!-- EVANDRA -->
                 <div class="p-5 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white hover:shadow-md hover:border-slate-300 transition flex items-center gap-3.5">
                     <div class="w-10 h-10 rounded-lg bg-indigo-900 text-white font-extrabold flex items-center justify-center text-sm shadow-sm">EV</div>
                     <div>
@@ -299,11 +371,13 @@
     <section id="modulos" class="py-24 px-4 bg-white">
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-16">
+                <!-- H2 Semántico -->
                 <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Arquitectura Modular Unificada</h2>
                 <p class="text-slate-600 text-lg">Módulos conectados de extremo a extremo sin reprocesos ni silos entre planta, almacén y administración comercial.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- H3 para cada Módulo -->
                 <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-zynterio/40 hover:shadow-lg transition">
                     <div class="w-12 h-12 bg-zynterio text-white rounded-xl flex items-center justify-center mb-6 font-bold text-lg">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
@@ -347,6 +421,7 @@
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-50 text-emerald-800 text-xs font-bold uppercase mb-4 border border-emerald-200">
                         Flujo Comercial Ágil
                     </div>
+                    <!-- H2 Semántico -->
                     <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-6">
                         Facturación diseñada para el ritmo real del mostrador y la bodega.
                     </h2>
@@ -358,7 +433,7 @@
                         <div class="flex items-start gap-3">
                             <div class="mt-1 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs">✓</div>
                             <div>
-                                <h4 class="font-bold text-slate-800 text-sm">Descarga Automática de Inventario</h4>
+                                <h3 class="font-bold text-slate-800 text-sm">Descarga Automática de Inventario</h3>
                                 <p class="text-slate-600 text-xs">Cada factura activa descuenta las unidades de la bodega origen sin desfases ni doble captura.</p>
                             </div>
                         </div>
@@ -366,7 +441,7 @@
                         <div class="flex items-start gap-3">
                             <div class="mt-1 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs">✓</div>
                             <div>
-                                <h4 class="font-bold text-slate-800 text-sm">Validación de Estado & Auditoría</h4>
+                                <h3 class="font-bold text-slate-800 text-sm">Validación de Estado & Auditoría</h3>
                                 <p class="text-slate-600 text-xs">Control de facturas activas, anuladas y notas de ajuste para asegurar informes financieros transparentes.</p>
                             </div>
                         </div>
@@ -374,7 +449,7 @@
                         <div class="flex items-start gap-3">
                             <div class="mt-1 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs">✓</div>
                             <div>
-                                <h4 class="font-bold text-slate-800 text-sm">Soporte Multi-lista & Cartera</h4>
+                                <h3 class="font-bold text-slate-800 text-sm">Soporte Multi-lista & Cartera</h3>
                                 <p class="text-slate-600 text-xs">Gestión de precios por cliente o canal, plazos de crédito y estados de cuenta por cobrar.</p>
                             </div>
                         </div>
@@ -413,6 +488,7 @@
                 <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 text-zynterio text-xs font-bold uppercase mb-3">
                     Tarifario Transparente en Pesos Colombianos (COP)
                 </div>
+                <!-- H2 Semántico -->
                 <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">Esquema de Precios Zynterio ERP</h2>
                 <p class="text-slate-600 text-base">Planes escalables para empresas en crecimiento o corporativos consolidados.</p>
             </div>
@@ -420,6 +496,7 @@
             <!-- BLOQUE 1: SUSCRIPCIÓN MENSUAL (SaaS) -->
             <div class="mb-20">
                 <div class="flex flex-col sm:flex-row justify-between items-center bg-zynterio text-white px-6 py-4 rounded-xl mb-8">
+                    <!-- H3 de Categoría de Planes -->
                     <h3 class="text-lg font-bold tracking-wide uppercase">Suscripción Mensual (SaaS)</h3>
                     <span class="bg-emerald-500 text-white font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider mt-2 sm:mt-0">
                         15% de descuento en pago anual
@@ -505,6 +582,7 @@
             <!-- BLOQUE 2: IMPLEMENTACIÓN ÚNICA -->
             <div class="mb-20">
                 <div class="bg-slate-900 text-white px-6 py-4 rounded-xl mb-8">
+                    <!-- H3 Semántico -->
                     <h3 class="text-lg font-bold tracking-wide uppercase">Inversión Única de Implementación</h3>
                 </div>
 
@@ -563,7 +641,7 @@
                                     <h4 class="font-bold text-slate-900 text-sm">Hora Adicional de Soporte Premium</h4>
                                     <p class="text-xs text-slate-600 mt-1">Consultoría experta, creación de nuevos informes o ajustes específicos.</p>
                                 </div>
-                                <span class="text-base font-black text-zynterio">$110.000 <span class="text-[10px] text-slate-500 font-semibold block">COP / hora</span></span>
+                                <span class="text-base font-black text-zynterio">$110.000 <span class="text-[10px] text-slate-500 font-semibold block text-right">COP / hora</span></span>
                             </div>
                         </div>
                     </div>
@@ -596,57 +674,57 @@
     <section id="contacto" class="py-24 px-4 bg-slate-50 border-t border-slate-200">
         <div class="max-w-2xl mx-auto">
             <div class="text-center mb-10">
+                <!-- H2 Semántico -->
                 <h2 class="text-3xl font-extrabold text-slate-900 mb-3">Agenda una demostración de Zynterio ERP</h2>
                 <p class="text-slate-600 text-sm">Dinos tus requerimientos y te cotizamos el plan óptimo para tu operación.</p>
             </div>
             
             <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5 bg-white p-8 sm:p-10 rounded-2xl border border-slate-200 shadow-sm">
-    
-    <!-- ACCESS KEY LIMPIA -->
-    <input type="hidden" name="access_key" value="3b829119-1a74-4bef-a39e-495ed1477b0c">
-    
-    <!-- REDIRECCIÓN -->
-    <input type="hidden" name="redirect" value="https://zynterio.cloud/gracias.html">
-    
-    <input type="hidden" name="subject" value="Nueva Solicitud de Demostración - Zynterio ERP">
-    <input type="hidden" name="from_name" value="Zynterio Leads">
-    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <!-- ACCESS KEY -->
+                <input type="hidden" name="access_key" value="3b829119-1a74-4bef-a39e-495ed1477b0c">
+                
+                <!-- REDIRECCIÓN -->
+                <input type="hidden" name="redirect" value="https://zynterio.cloud/gracias.html">
+                
+                <input type="hidden" name="subject" value="Nueva Solicitud de Demostración - Zynterio ERP">
+                <input type="hidden" name="from_name" value="Zynterio Leads">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Nombre completo</label>
-            <input type="text" name="nombre" required placeholder="Tu nombre" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm transition">
-        </div>
-        <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Correo corporativo</label>
-            <input type="email" name="email" required placeholder="tu@empresa.com" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm transition">
-        </div>
-    </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                        <label for="nombre" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm transition">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Correo corporativo</label>
+                        <input type="email" id="email" name="email" required placeholder="tu@empresa.com" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm transition">
+                    </div>
+                </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Empresa / Razón Social</label>
-            <input type="text" name="empresa" required placeholder="Nombre de la empresa" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm transition">
-        </div>
-        <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Modalidad de Interés</label>
-            <select name="modalidad" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm bg-white transition">
-                <option value="Suscripción Mensual (SaaS)">Suscripción Mensual (SaaS)</option>
-                <option value="Servidor Propio (On-Premise)">Servidor Propio (On-Premise)</option>
-                <option value="Solo Consultoría e Implementación">Solo Consultoría e Implementación</option>
-            </select>
-        </div>
-    </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                        <label for="empresa" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Empresa / Razón Social</label>
+                        <input type="text" id="empresa" name="empresa" required placeholder="Nombre de la empresa" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm transition">
+                    </div>
+                    <div>
+                        <label for="modalidad" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Modalidad de Interés</label>
+                        <select id="modalidad" name="modalidad" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm bg-white transition">
+                            <option value="Suscripción Mensual (SaaS)">Suscripción Mensual (SaaS)</option>
+                            <option value="Servidor Propio (On-Premise)">Servidor Propio (On-Premise)</option>
+                            <option value="Solo Consultoría e Implementación">Solo Consultoría e Implementación</option>
+                        </select>
+                    </div>
+                </div>
 
-    <div>
-        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Descripción de la Operación</label>
-        <textarea name="mensaje" rows="3" placeholder="Número de bodegas, volumen de referencias o procesos que deseas automatizar..." class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm transition"></textarea>
-    </div>
+                <div>
+                    <label for="mensaje" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Descripción de la Operación</label>
+                    <textarea id="mensaje" name="mensaje" rows="3" placeholder="Número de bodegas, volumen de referencias o procesos que deseas automatizar..." class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-zynterio focus:ring-1 focus:ring-zynterio outline-none text-sm transition"></textarea>
+                </div>
 
-    <button type="submit" class="w-full py-3.5 bg-zynterio text-white font-bold rounded-lg hover:bg-zynterio-light transition shadow-md text-sm uppercase tracking-wider">
-        Solicitar Propuesta y Demo
-    </button>
-</form>
+                <button type="submit" class="w-full py-3.5 bg-zynterio text-white font-bold rounded-lg hover:bg-zynterio-light transition shadow-md text-sm uppercase tracking-wider">
+                    Solicitar Propuesta y Demo
+                </button>
+            </form>
         </div>
     </section>
 
@@ -663,5 +741,21 @@
         </div>
     </footer>
 
+    <!-- SCRIPT CONTROL MENÚ MÓVIL RESPONSIVE -->
+    <script>
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
