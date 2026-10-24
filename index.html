@@ -44,16 +44,20 @@
         "priceValidUntil": "2027-12-31"
       }
     }
- <!-- TAILWIND CSS CDN (jsDelivr - Libre de bloqueos por ISP) -->
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<style type="text/tailwindcss">
-  @theme {
+ <!-- TAILWIND CSS (Build completo sin compilación en el cliente) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+<style>
+  :root {
     --color-zynterio: #001F3F;
     --color-zynterio-light: #0A335C;
     --color-zynterio-dark: #001326;
     --color-zynterio-accent: #0284C7;
   }
-
+  .bg-zynterio { background-color: var(--color-zynterio); }
+  .text-zynterio { color: var(--color-zynterio); }
+  .bg-zynterio-dark { background-color: var(--color-zynterio-dark); }
+  .text-zynterio-accent { color: var(--color-zynterio-accent); }
+  
   body {
     font-family: 'Inter', sans-serif;
   }
