@@ -44,26 +44,31 @@
         "priceValidUntil": "2027-12-31"
       }
     }
-<!-- TAILWIND CSS ESTABLE (Precompilado - Cero JavaScript, cero bloqueos) -->
-<link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css">
-<style>
-  :root {
-    --color-zynterio: #001F3F;
-    --color-zynterio-light: #0A335C;
-    --color-zynterio-dark: #001326;
-    --color-zynterio-accent: #0284C7;
-  }
-  .bg-zynterio { background-color: var(--color-zynterio); }
-  .text-zynterio { color: var(--color-zynterio); }
-  .bg-zynterio-dark { background-color: var(--color-zynterio-dark); }
-  .bg-zynterio-light { background-color: var(--color-zynterio-light); }
-  .text-zynterio-accent { color: var(--color-zynterio-accent); }
-  .border-zynterio { border-color: var(--color-zynterio); }
+    </script>
 
-  body {
-    font-family: 'Inter', sans-serif;
-  }
-</style>
+    <!-- TAILWIND CSS PLAY CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              zynterio: {
+                DEFAULT: '#001F3F',
+                light: '#0A335C',
+                dark: '#001326',
+                accent: '#0284C7'
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased selection:bg-sky-500 selection:text-white relative">
 
