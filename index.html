@@ -44,24 +44,29 @@
         "priceValidUntil": "2027-12-31"
       }
     }
-   <!-- Configuración y estilos Tailwind v4 -->
-<style type="text/tailwindcss">
-  @import "tailwindcss";
-
-  @theme {
-    --color-zynterio: #001F3F;
-    --color-zynterio-light: #0A335C;
-    --color-zynterio-dark: #001326;
-    --color-zynterio-accent: #0284C7;
+  <!-- Tailwind CDN v3 Estable -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          zynterio: {
+            DEFAULT: '#001F3F',
+            light: '#0A335C',
+            dark: '#001326',
+            accent: '#0284C7'
+          }
+        }
+      }
+    }
   }
-
+</script>
+<style>
   body {
     font-family: 'Inter', sans-serif;
   }
 </style>
-
-<!-- El script CDN después de la definición de estilos -->
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>>
 
     <style>
         body { font-family: 'Inter', sans-serif; }
